@@ -29,6 +29,15 @@ const NoteSchema = new mongoose.Schema(
 	  status: {
 		type: String,
 		enum: ['completed', 'new'],
-	  }
+		default: 'new',
+	  },
+	  category: {
+		type: String,
+		enum: ['work', 'todos', 'technology', 'personal' ],
+		default: 'todos',
+	  },
+	},
+	{
+		timestamp: true,
 	}
-)
+);
